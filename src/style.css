@@ -48,6 +48,7 @@ h1 {
     position: relative;
 }
 
+
 h1::after {
     content: "";
      position: absolute;
@@ -58,4 +59,23 @@ h1::after {
      transform: translateX(-50%);
      background-color: #667eea;
      border-radius: 2px;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.generate-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #ffffff;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 2.5rem;
+    font-weight: 700;
+    font-size: 15px;
 }
