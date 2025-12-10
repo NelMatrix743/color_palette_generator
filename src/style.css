@@ -7,3 +7,18 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+body {
+    background: #7a6bf1;
+    min-height: 100vh; /* necessary for alig-items to take effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
