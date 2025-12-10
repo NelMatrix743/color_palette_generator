@@ -35,4 +35,6 @@ main {
     border: none;
     border-radius: 2rem;
     padding: 20px 30px;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
