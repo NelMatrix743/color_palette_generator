@@ -79,3 +79,15 @@ h1::after {
     font-weight: 700;
     font-size: 15px;
 }
+
+
+.generate-btn:hover {
+    scale: 0.99;
+}
+
+
+.generate-btn:active {
+    border: 2px solid #472b63;
+    background: white;
+    color: #764ba2;
+}
