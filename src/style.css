@@ -101,6 +101,23 @@ h1::after {
 }
 
 
+.copy-btn {
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+
+.copy-btn:hover {
+    color: #667eea;
+}
+
+
+.hex-value {
+    font-weight: 500;
+}
+
+
 .btn-container {
     display: flex;
     justify-content: center;
