@@ -62,6 +62,14 @@ h1::after {
 }
 
 
+.palette-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
 .btn-container {
     display: flex;
     justify-content: center;
