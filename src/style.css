@@ -21,4 +21,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 30px;
+}
+
+
+main {
+    width: 700px;
+    height: 350px;
+    max-height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 2rem;
+    padding: 20px 30px;
 }
