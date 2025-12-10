@@ -84,6 +84,23 @@ h1::after {
 }
 
 
+.color-holder {
+    height: 120px;
+    cursor: pointer;
+}
+
+
+.color-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 0.7px;
+}
+
+
 .btn-container {
     display: flex;
     justify-content: center;
