@@ -22,3 +22,6 @@ let hexValue4 = document.getElementById("hxv-4");
 
 // map copy buttons
 let copyBtn = document.getElementById("copy-btn");
+
+// map palette generation button
+let generateBtn = document.getElementById("gen-btn");
