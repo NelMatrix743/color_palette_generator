@@ -20,3 +20,5 @@ let hexValue2 = document.getElementById("hxv-2");
 let hexValue3 = document.getElementById("hxv-3");
 let hexValue4 = document.getElementById("hxv-4");
 
+// map copy buttons
+let copyBtn = document.getElementById("copy-btn");
