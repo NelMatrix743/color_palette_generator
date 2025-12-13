@@ -6,7 +6,7 @@
  */
 
 // map copy buttons
-let copyBtn = document.getElementById("copy-btn");
+let copyBtn = document.querySelector(".copy-btn");
 
 // map palette generation button
 let generateBtn = document.getElementById("gen-btn");
