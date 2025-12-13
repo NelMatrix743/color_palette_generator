@@ -44,7 +44,7 @@ function updateColorBoxes(colors){
     });
 }
 
-function clipboardSuccessfullyCopied(copyButton){
+function clipboardSuccessfullyWrittenTo(copyButton){
     copyButton.classList.remove("far", "fa-copy");
     copyButton.classList.add("fas", "fa-check");
     copyButton.style.color = "#48bb78";
@@ -60,7 +60,7 @@ function writeToClipboard(textValue, copyBtn){
     navigator.clipboard.writeText(textValue)
         .then(
             () => {
-                clipboardSuccessfullyCopied(copyBtn)
+                clipboardSuccessfullyWrittenTo(copyBtn);
             }
     ).catch((error) => {
                 alert("color could not be copied to clipboard\n" + error);
