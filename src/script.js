@@ -6,7 +6,7 @@
  */
 
 // map copy buttons
-let copyBtn = document.querySelector(".copy-btn");
+let copyBtns = document.querySelectorAll(".copy-btn");
 
 // map palette generation button
 let generateBtn = document.getElementById("gen-btn");
@@ -47,11 +47,13 @@ generateBtn.addEventListener("click", () => {
     generateColorPalette();
 });
 
-copyBtn.addEventListener("click", (e) => {
-    let colorInfo = e.currentTarget.closest(".color-info");
-    let hexHolder = colorInfo.querySelector(".hex-value");
-    let hexValue = hexHolder.textContent.trim();
+copyBtns.forEach((copyButton) => {
+    copyButton.addEventListener("click", (e) => {
+        let colorInfo = e.currentTarget.closest(".color-info");
+        let hexValue = colorInfo.querySelector(".hex-value")
+            .textContent.trim();
 
-    // write to clipboard
-    navigator.clipboard.writeText(hexValue);
+        // write to clipboard
+        navigator.clipboard.writeText(hexValue);
+    });
 });
