@@ -46,3 +46,12 @@ function updateColorBoxes(colors){
 generateBtn.addEventListener("click", () => {
     generateColorPalette();
 });
+
+copyBtn.addEventListener("click", (e) => {
+    let colorInfo = e.currentTarget.closest(".color-info");
+    let hexHolder = colorInfo.querySelector(".hex-value");
+    let hexValue = hexHolder.textContent.trim();
+
+    // write to clipboard
+    navigator.clipboard.writeText(hexValue);
+});
