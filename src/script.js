@@ -56,6 +56,18 @@ function clipboardSuccessfullyCopied(copyButton){
     }, 1000);
 }
 
+function writeToClipboard(textValue, copyBtn){
+    navigator.clipboard.writeText(textValue)
+        .then(
+            () => {
+                clipboardSuccessfullyCopied(copyBtn)
+            }
+    ).catch((error) => {
+                alert("color could not be copied to clipboard\n" + error);
+            }
+    );
+}
+
 
 // add event listeners
 generateBtn.addEventListener("click", () => {
@@ -69,16 +81,8 @@ copyBtns.forEach((copyButton) => {
             .textContent.trim();
 
         // write to clipboard
-        navigator.clipboard.writeText(hexValue)
-            .then(
-                () => clipboardSuccessfullyCopied(copyButton)
-            )
-            .catch((error) => {
-                 alert("color could not be copied to clipboard\n" + error);
-                }
-            );
-        }
-    );
+        writeToClipboard(hexValue, copyButton);
+    });
 });
 
 colorContainers.forEach((colorContainer) => {
@@ -88,15 +92,7 @@ colorContainers.forEach((colorContainer) => {
         let hexValue = commonParent.querySelector(".hex-value")
             .textContent.trim();
 
-        navigator.clipboard.writeText(hexValue)
-            .then(
-                () => {
-                    clipboardSuccessfullyCopied(copyBtn)
-                }
-            )
-            .catch((error) => {
-                 alert("color could not be copied to clipboard\n" + error);
-                }
-            );
+        // write to clipboard
+        writeToClipboard(hexValue, copyBtn);
     });
 });
