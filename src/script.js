@@ -96,3 +96,17 @@ colorContainers.forEach((colorContainer) => {
         writeToClipboard(hexValue, copyBtn);
     });
 });
+
+
+// main function implementation
+function main(){
+    // generate color palette on page-load
+    generateColorPalette();
+}
+
+
+// --------------- ENTRY POINT --------------- //
+
+main();
+
+// eosc
