@@ -40,3 +40,9 @@ function updateColorBoxes(colors){
         hexValue.textContent = colors[index];
     });
 }
+
+
+// add event listeners
+generateBtn.addEventListener("click", () => {
+    generateColorPalette();
+});
