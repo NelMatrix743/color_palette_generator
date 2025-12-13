@@ -41,6 +41,18 @@ function updateColorBoxes(colors){
     });
 }
 
+function clipboardSuccessfullyCopied(copyButton){
+    copyButton.classList.remove("far", "fa-copy");
+    copyButton.classList.add("fas", "fa-check");
+    copyButton.style.color = "#48bb78";
+
+    setTimeout(() => {
+        copyButton.classList.remove("fas", "fa-check");
+        copyButton.classList.add("far", "fa-copy");
+        copyButton.style.color = "#64748b";
+    }, 1000);
+}
+
 
 // add event listeners
 generateBtn.addEventListener("click", () => {
@@ -54,6 +66,14 @@ copyBtns.forEach((copyButton) => {
             .textContent.trim();
 
         // write to clipboard
-        navigator.clipboard.writeText(hexValue);
-    });
+        navigator.clipboard.writeText(hexValue)
+            .then(
+                () => clipboardSuccessfullyCopied(copyButton)
+            )
+            .catch((error) => {
+                 alert("color could not be copied to clipboard\n" + error);
+                }
+            );
+        }
+    );
 });
