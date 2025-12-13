@@ -11,6 +11,9 @@ let copyBtns = document.querySelectorAll(".copy-btn");
 // map palette generation button
 let generateBtn = document.getElementById("gen-btn");
 
+// map color containers
+let colorContainers = document.querySelectorAll(".color-holder");
+
 
 // implement required functions
 function generateColorPalette(){
@@ -76,4 +79,24 @@ copyBtns.forEach((copyButton) => {
             );
         }
     );
+});
+
+colorContainers.forEach((colorContainer) => {
+    colorContainer.addEventListener("click", () => {
+        let commonParent = colorContainer.closest(".color-box");
+        let copyBtn = commonParent.querySelector(".copy-btn");
+        let hexValue = commonParent.querySelector(".hex-value")
+            .textContent.trim();
+
+        navigator.clipboard.writeText(hexValue)
+            .then(
+                () => {
+                    clipboardSuccessfullyCopied(copyBtn)
+                }
+            )
+            .catch((error) => {
+                 alert("color could not be copied to clipboard\n" + error);
+                }
+            );
+    });
 });
