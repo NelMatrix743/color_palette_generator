@@ -18,6 +18,7 @@ function generateColorPalette(){
     for(let color = 0; color <= 4; color++){
         colors.push(generateRandColor());
     }
+    updateColorBoxes(colors);
 }
 
 function generateRandColor(){
@@ -27,4 +28,15 @@ function generateRandColor(){
         result += hexChars[Math.floor(Math.random() * 16)];
     }
     return result;
+}
+
+function updateColorBoxes(colors){
+    let colorBoxes = document.querySelectorAll(".color-box");
+    colorBoxes.forEach((colorBox, index) => {
+        let colorHolder = colorBox.querySelector(".color-holder");
+        let hexValue = colorBox.querySelector(".hex-value");
+
+        colorHolder.style.backgroundColor = colors[index];
+        hexValue.textContent = colors[index];
+    });
 }
